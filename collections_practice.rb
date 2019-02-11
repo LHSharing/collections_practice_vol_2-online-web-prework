@@ -74,6 +74,7 @@ data
 =end
 
 def organize_schools(schools)
+<<<<<<< HEAD
  hash = {}
  schools.each do |name,info|
   locations = info[:location]
@@ -96,3 +97,32 @@ end
       
 #organize_schools organizes the schools by location
 
+=======
+ schools.map do |name,info|
+  info.map do |loc,state|
+     #if hashes have the same value==> merge their keys? OR ==>shovel their value into an hash
+     ###if info{=> == "NYC"} shovel into a hash
+     
+binding.pry
+      state
+      #one = state.select do |n|
+       if n == "NYC" 
+     #if state == "new york"
+#end
+      #state
+     end
+  end   
+ end
+#end
+end
+#organize_schools organizes the schools by location
+
+#       expected: {"Chicago"=>["dev boot camp chicago"], "NYC"=>["flatiron school bk", "flatiron school", "general assembly"], "SF"=>["dev boot camp", "Hack Reactor"]}
+ #           got: {"Hack Reactor"=>{:location=>"SF"}, "dev boot camp"=>{:location=>"SF"}, "dev boot camp chicago"=>{:lo...:location=>"NYC"}, "flatiron school bk"=>{:location=>"NYC"}, "general assembly"=>{:location=>"NYC"}}
+
+ #sorted_keys = schools.keys.sort
+#sorted_keys.each do |k|
+#  puts hash[k]
+  #schools = Hash[ schools.sort_by { |key, val| key } ]
+  #temp = temp.sort_by { |key| key }.to_h
+>>>>>>> 449c104ad5ebd43538e735340cd39b36bfd484d4
